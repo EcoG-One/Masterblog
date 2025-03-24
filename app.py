@@ -83,11 +83,11 @@ def add():
         title = request.form.get("title")
         content = request.form.get("content")
         if posts_dict == {}:
-            id = 1
+            new_id = 1
         else:
-            id = max(posts_dict.keys()) + 1
-        posts_dict[id] = {
-            "id": id,
+            new_id = max(posts_dict.keys()) + 1
+        posts_dict[new_id] = {
+            "id": new_id,
             "author": author,
             "title": title,
             "content": content,
