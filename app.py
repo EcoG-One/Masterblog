@@ -45,9 +45,12 @@ def save_posts():
     Creates the posts list, from the values of the posts dictionary
     and saves it as JSON file.
     """
-    posts = list(posts_dict.values())
-    with open(file_path, "w") as json_file:
-        json.dump(posts, json_file, indent=4)
+    try:
+        posts = list(posts_dict.values())
+        with open(file_path, "w") as json_file:
+            json.dump(posts, json_file, indent=4)
+    except OSError as e:
+        return e
 
 
 def fetch_post_by_id(post_id):

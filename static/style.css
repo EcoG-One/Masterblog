@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #F5F5F5;
@@ -10,18 +11,160 @@ h1 {
     color: #4F4F4F;
 }
 
+/* Post Container */
 .post {
-    background-color: #FFF;
-    border: 1px solid #DDD;
+    background: #f9f9f9;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    border-radius: 8px;
 }
 
 .post h2 {
-    margin-top: 0;
+    margin-bottom: 5px;
 }
 
 .post p {
-    margin: 10px 0;
+    margin-bottom: 10px;
+}
+
+/* Post Action Buttons */
+.post-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.post-actions form {
+    display: inline-block;
+}
+
+/* Button Styles */
+button {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Update Button */
+.update-btn {
+    background: #007bff;
+    color: white;
+}
+
+.update-btn:hover {
+    background: #0056b3;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #b02a37;
+}
+
+/* Like Button */
+.like-btn {
+    background: #28a745;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.like-btn:hover {
+    background: #218838;
+}
+
+.like-btn:active {
+    transform: scale(0.95);
+}
+
+/* Add Post Button */
+.add-post-button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.add-post-button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+/* Post Form */
+form.post-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form.post-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+form.post-form input[type="text"],
+form.post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+form.post-form input[type="text"]:focus,
+form.post-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+form.post-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+form.post-form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+form.post-form button:hover {
+    background: #0056b3;
+}
+
+/* Like Button Enhancement */
+button#likes::after {
+    content: " 👍";
 }

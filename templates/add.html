@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Submit Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h2>Submit Data</h2>
-    <form action="/add" method="POST">
-        <label for="author">Author:</label><br>
-        <input type="text" id="author" name="author"><br><br>
+    <h1>Create a New Post</h1>
+    <form class="post-form" action="/add" method="POST">
+
+        <label for="author">Written By:</label><br>
+        <input type="text" id="author" name="author" required><br><br>
+
         <label for="title">Title:</label><br>
-        <input type="text" id="title" name="title"><br><br>
+        <input type="text" id="title" name="title" required><br><br>
+
         <label for="content">Content:</label><br>
-        <input type="text" id="content" name="content"><br><br>
-        <input type="submit" value="Submit">
+        <textarea id="content" name="content" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Submit Post">
     </form>
 </body>
 </html>
